@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/Android/CookBook/app/src/main/res/drawable/button_shape.xml" value="0.7964285714285714" />
         <entry key="..\:/Projects/Android/CookBook/app/src/main/res/layout/activity_main.xml" value="0.6134868421052632" />
+        <entry key="..\:/Projects/Android/CookBook/app/src/main/res/layout/activity_menu.xml" value="0.6282894736842105" />
+        <entry key="..\:/Projects/Android/CookBook/app/src/main/res/layout/fragment_blank.xml" value="0.6282894736842105" />
+        <entry key="..\:/Projects/Android/CookBook/app/src/main/res/layout/fragment_main.xml" value="0.6513157894736842" />
       </map>
     </option>
   </component>
