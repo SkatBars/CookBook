@@ -2,6 +2,7 @@ package com.example.cookbook
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -30,6 +31,15 @@ class MenuAdapter(private val items: List<ItemMenu>) : RecyclerView.Adapter<Menu
         fun bind(itemMenu: ItemMenu) {
             binding.iconMenu.setImageDrawable(context.getDrawable(itemMenu.icon))
             binding.titleMenu.text = itemMenu.title
+
+            binding.cardView.setOnClickListener {
+                val intent = Intent(context, DetailActivity::class.java)
+                intent.putExtra("icon", itemMenu.icon)
+                intent.putExtra("img", itemMenu.img)
+                intent.putExtra("title", itemMenu.title)
+                intent.putExtra("text", itemMenu.text)
+                context.startActivity(intent)
+            }
         }
 
         companion object {
