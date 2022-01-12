@@ -3,10 +3,12 @@ package com.example.cookbook
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.support.wearable.activity.WearableActivity
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cookbook.databinding.ActivityMainBinding
 
-class MainActivity : Activity() {
+class MainActivity : WearableActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -20,6 +22,10 @@ class MainActivity : Activity() {
             val intent = Intent(this@MainActivity, MenuActivity::class.java)
             startActivity(intent)
         }
+    }
 
+    override fun onStart() {
+        Log.i("qwe", "resume")
+        super.onStart()
     }
 }
