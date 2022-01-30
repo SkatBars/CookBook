@@ -32,7 +32,7 @@ class MenuAdapter(private val items: List<ItemMenu>) : RecyclerView.Adapter<Menu
             binding.iconMenu.setImageDrawable(context.getDrawable(itemMenu.icon))
             binding.titleMenu.text = itemMenu.title
 
-            binding.cardView.setOnClickListener {
+            binding.titleMenu.setOnClickListener {
                 val intent = Intent(context, DetailActivity::class.java)
                 intent.putExtra("icon", itemMenu.icon)
                 intent.putExtra("img", itemMenu.img)

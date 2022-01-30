@@ -5,42 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:cardCornerRadius="4dp">
+        android:background="#00FFFFFF"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/title_menu"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#3C3C3C"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp">
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="10dp"
+            android:text="Борщ"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icon_menu"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/title_menu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_marginBottom="10dp"
-                android:text="Борщ"
-                android:textColor="@android:color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/icon_menu"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/icon_menu"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_blinchik" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/icon_menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_blinchik" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.wear.widget.drawer.WearableDrawerLayout>
